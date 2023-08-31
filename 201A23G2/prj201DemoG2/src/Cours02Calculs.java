@@ -25,7 +25,7 @@ public class Cours02Calculs {
         force = calculerForce(masse, acceleration);
 
         System.out.println("Avec une masse de " + masse + " et une accélération de " + acceleration + ", nous aurons une force de " + force + ".");
-        l
+
     }
 
     private int calculerForce(int masse, int acceleration) {
