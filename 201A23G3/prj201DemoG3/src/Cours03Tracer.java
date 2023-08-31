@@ -1,5 +1,3 @@
-
-
 public class Cours03Tracer {
     public Cours03Tracer() {
         System.out.println("1");
