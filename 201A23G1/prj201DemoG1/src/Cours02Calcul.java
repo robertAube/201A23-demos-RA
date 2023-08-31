@@ -15,12 +15,24 @@ public class Cours02Calcul {
 
         afficherDivision(2, 3);
         afficherDivision(1, 3);
+        afficherDivision(1, 0);
+
+        afficherRacineCarre(4);
+        afficherRacineCarre(-4);
+    }
+
+    private void afficherRacineCarre(double nb) {
+        double racine;
+        racine = Math.sqrt(nb);
+        System.out.println("Racine carré de " + nb + " = " + racine);
+
     }
 
     private void afficherDivision(int dividende, int diviseur) {
         double quotient;
 
         quotient = (double) dividende / diviseur; //cast force l'opération à se faire en réel
+
         System.out.println("dividende / diviseur = " + quotient);
     }
 
