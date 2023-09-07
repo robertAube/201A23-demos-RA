@@ -9,7 +9,7 @@ public class Cours05DemoSting {
 
     private void testerGetCaractereALIndice() {
         String str = "Bonjour le monde";
-        char c; //
+        char c; //type caractère
 
         System.out.println(str.charAt(0));
 
@@ -46,9 +46,9 @@ public class Cours05DemoSting {
     }
 
     private String getMajuscule(String str) {
-        String strEnMAjuscule = "";
-        strEnMAjuscule = str.toUpperCase();
-        return strEnMAjuscule;
+        String strEnMajuscule = "";
+        strEnMajuscule = str.toUpperCase();
+        return strEnMajuscule;
     }
 
     private String getStringEntreGilmets(String str) {
