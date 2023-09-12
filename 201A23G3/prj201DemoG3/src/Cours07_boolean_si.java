@@ -8,12 +8,43 @@ public class Cours07_boolean_si {
     }
 
     private void tester_afficherNoteEstReussite() {
-        afficherNoteEstReussiteV1(80);
-        afficherNoteEstReussiteV1(50);
-        afficherNoteEstReussiteV1(59.99999);
-        afficherNoteEstReussiteV1(60);
-        afficherNoteEstReussiteV1(0);
-        afficherNoteEstReussiteV1(100);
+        //Pour faire une sélection verticale avec intelliJ : sélectionner en appuyant sur ALT-souris droite et descendez
+        afficherNoteEstReussiteV2(80); //La note 80.0 est une réussite.
+        afficherNoteEstReussiteV2(50); //La note 50.0 est un échec.
+        afficherNoteEstReussiteV2(59.99999); //reçoit un double
+        afficherNoteEstReussiteV2(60);
+        afficherNoteEstReussiteV2(0);
+        afficherNoteEstReussiteV2(100);
+    }
+
+    private void afficherNoteEstReussiteV2(double note) {
+        boolean estUnSucces; // type boolean permet de conserver la valeur true ou false
+        String str;
+
+        estUnSucces = note >= 60;
+
+        str = "La note " + note + " est ";
+
+        str += estUnSucces ? "une réussite" : "un échec"; //si compact : boolean ? valeurSiVrai : valeurSiFaux
+
+        System.out.println(str + '.');
+    }
+
+    private void afficherNoteEstReussiteV1(double note) {
+        boolean estUnSucces; // type boolean permet de conserver la valeur true ou false
+        String str;
+
+        estUnSucces = note >= 60;
+
+        str = "La note " + note + " est ";
+
+        if (estUnSucces) {
+            str += "une réussite";
+        } else {
+            str += "un échec";
+        }
+
+        System.out.println(str + '.');
     }
 
     private void tester_afficherSiUnNombreEstPositifOuNegatif() {
