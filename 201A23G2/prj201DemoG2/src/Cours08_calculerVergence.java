@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Cours08_calculerVergence {
     public Cours08_calculerVergence() {
 //        tester_calculerVergence();
@@ -8,7 +10,7 @@ public class Cours08_calculerVergence {
     private void demanderLFEtAfficherVergence() {
         int longueurFocale;
 
-        longueurFocale = lireEntier("Vous voulez calculer la vergence pour quelle longueur focale? ");
+        longueurFocale = lireInt("Vous voulez calculer la vergence pour quelle longueur focale? ");
         afficherEtCalculerVergence(longueurFocale);
     }
 
@@ -37,6 +39,27 @@ public class Cours08_calculerVergence {
     private void tester_calculerVergence() {
         System.out.println(calculerVergence(1) == 1);
         System.out.println(calculerVergence(2) == 0.5);
+    }
+
+    public int lireInt(String question) {
+        String reponse;
+        int reponseInt;
+
+        reponse = lireString(question);
+        reponseInt = Integer.parseInt(reponse);
+
+        return reponseInt;
+    }
+    public String lireString(String question) {
+        String reponseStr;
+        Scanner sc;
+
+        sc = new Scanner(System.in);
+
+        System.out.print(question);
+        reponseStr = sc.nextLine();
+
+        return reponseStr;
     }
 
     public static void main(String[] args) {
