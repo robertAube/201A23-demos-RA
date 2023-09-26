@@ -1,7 +1,8 @@
-public class Cours10_while {
-    public Cours10_while() {
-        //  tester_compterDe1AN();
+import javax.imageio.stream.ImageInputStreamImpl;
 
+public class Cours11_for {
+    public Cours11_for() {
+//        tester_compterDe1AN();
         tester_afficherNbDeCarDansUneString();
     }
 
@@ -30,14 +31,12 @@ public class Cours10_while {
 
         lgStr = str.length();
 
-        index = 0;
         compteur = 0;
-        while (index < lgStr) {
+        for (index = 0; index < lgStr; index++) {
             c = str.charAt(index);
             if (c == lettreRecherche) {
                 compteur += 1;
             }
-            index += 1;
         }
 
         return compteur;
@@ -54,16 +53,24 @@ public class Cours10_while {
         int compteur;
 
         System.out.println("Compter de 1 à " + nbLimite);
-        compteur = 1;
-        while (compteur <= nbLimite) {
+
+        //Boucle For
+        //for (initialisation du compteur; condition qui doit être vrai pour entrer et poursuivre la boucle; incrémentation du compteur)
+        //1 - exécuter la partie 1 du for
+        //2 - vérifie la condition de la 2e partie :
+        //    -- si c'est vrai : on exécute le code à l'intérieur de la boucle.
+        //    -- si c'est faux : on sort de la boucle.
+        //3 - Selon le cas, on exécute l'intérieur de la boucle
+        //4 - On exécute la 3e partie du for, qui normalement modifie la condition de la partie 2
+        //5 - On retourne faire le point 2.
+
+        for (compteur = 1; compteur <= nbLimite; compteur++) {
             System.out.print(compteur + (compteur == nbLimite ? "" : ", "));
-            compteur += 1;
         }
         System.out.print('\n');
     }
 
     public static void main(String[] args) {
-        new Cours10_while();
-
+        new Cours11_for();
     }
 }

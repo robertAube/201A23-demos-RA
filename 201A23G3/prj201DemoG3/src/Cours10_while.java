@@ -27,11 +27,13 @@ public class Cours10_while {
         //str.charAt(index) - retourne le caractère à l'index (0 étant le premier caractère)
         //while
 
-        int compteur = 0;
-        int index = 0;
+        int compteur;
+        int index;
         int longueur = str.length();
         char c;
 
+        compteur = 0;
+        index = 0;
         while (index < longueur) {
             c = str.charAt(index);
             if (c == lettreAChercher) {
