@@ -1,6 +1,6 @@
-public class Cours02IntroMethode {
+public class Cours02_introMethode {
     //constructeur de la classe Cours02Introduction (même nom que la classe)
-    public Cours02IntroMethode() { //ALT-Insert & Constructor
+    public Cours02_introMethode() { //ALT-Insert & Constructor
         System.out.println("je suis le constructeur");
         afficherDateJour(); //appeler la méthode afficherDateJour();
         afficherPrenomNom();
@@ -22,7 +22,7 @@ public class Cours02IntroMethode {
 
     public static void main(String[] args) {
         System.out.println("Première ligne executé");
-        new Cours02IntroMethode(); //Instanciation de la classe Cours02Introduction et appelle le constructeur de Cours02Introduction
+        new Cours02_introMethode(); //Instanciation de la classe Cours02Introduction et appelle le constructeur de Cours02Introduction
         System.out.println("Dernière ligne du main");
     }
 }

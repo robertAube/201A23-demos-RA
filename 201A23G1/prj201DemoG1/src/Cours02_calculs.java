@@ -1,6 +1,6 @@
 //file/settings/editor/natural language : changer la langue pour les commentaires
-public class Cours02Calcul {
-    public Cours02Calcul() {
+public class Cours02_calculs {
+    public Cours02_calculs() {
         //    afficher1Plus1V1();
         //    afficher1Plus1V2();
         //   afficherDesAdditionsAvecDesReels();
@@ -93,6 +93,6 @@ public class Cours02Calcul {
     }
 
     public static void main(String[] args) {
-        new Cours02Calcul();
+        new Cours02_calculs();
     }
 }

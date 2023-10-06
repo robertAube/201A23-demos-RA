@@ -1,5 +1,5 @@
-public class Cours05ErreurExecution {
-    public Cours05ErreurExecution() {
+public class Cours05_erreurExecution {
+    public Cours05_erreurExecution() {
         int i;
         String strNb;
 
@@ -22,6 +22,6 @@ public class Cours05ErreurExecution {
     }
 
     public static void main(String[] args) {
-        new Cours05ErreurExecution();
+        new Cours05_erreurExecution();
     }
 }

@@ -1,5 +1,5 @@
-public class Cours05DemoSting {
-    public Cours05DemoSting() {
+public class Cours05_String {
+    public Cours05_String() {
       //  jouerAvecChaineDeCaracteres();
       //  jouerAvecCaracteresSpeciaux();
 //        afficherLaLongueurDUneString();
@@ -92,6 +92,6 @@ public class Cours05DemoSting {
     }
 
     public static void main(String[] args) {
-        new Cours05DemoSting();
+        new Cours05_String();
     }
 }

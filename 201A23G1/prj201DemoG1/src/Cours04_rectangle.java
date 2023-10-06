@@ -1,5 +1,5 @@
-public class Cours04Rectangle {
-    public Cours04Rectangle() {
+public class Cours04_rectangle {
+    public Cours04_rectangle() {
         testerAirRectangle();
     }
 
@@ -35,6 +35,6 @@ public class Cours04Rectangle {
 //	testerAirRectangle doit être appelé par le constructeur de la classe testerAirRectangle.
 
     public static void main(String[] args) {
-        new Cours04Rectangle();
+        new Cours04_rectangle();
     }
 }

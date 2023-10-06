@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Cours06Scanner {
-    public Cours06Scanner() {
+public class Cours06_Scanner {
+    public Cours06_Scanner() {
         lireEtAfficherNom();
         lireEtAfficherPrenom();
     }
@@ -29,6 +29,6 @@ public class Cours06Scanner {
     }
 
     public static void main(String[] args) {
-        new Cours06Scanner();
+        new Cours06_Scanner();
     }
 }

@@ -1,5 +1,5 @@
-public class Cours03Tracer {
-    public Cours03Tracer() {
+public class Cours03_tracer {
+    public Cours03_tracer() {
         System.out.println("1");
         abc();
         System.out.println("2");
@@ -25,7 +25,7 @@ public class Cours03Tracer {
 
     public static void main(String[] args) {
         System.out.println("7");
-        new Cours03Tracer();
+        new Cours03_tracer();
         System.out.println("8");
     }
 }

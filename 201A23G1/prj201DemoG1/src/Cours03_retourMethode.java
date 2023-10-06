@@ -1,5 +1,5 @@
-public class Cours03RetourMethode {
-    public Cours03RetourMethode() {
+public class Cours03_retourMethode {
+    public Cours03_retourMethode() {
         testerAddition();
         testerSoustraction();
     }
@@ -34,6 +34,6 @@ public class Cours03RetourMethode {
     }
 
     public static void main(String[] args) {
-        new Cours03RetourMethode();
+        new Cours03_retourMethode();
     }
 }
