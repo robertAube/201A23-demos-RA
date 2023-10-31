@@ -1,10 +1,28 @@
-package partie2.Cours18_Objet;
+package partie2.Cours19_ObjectSuite;
+
+import static partie2._utilitaire.UtilSaisie.*;
 
 public class JouerAvecPizza {
     public JouerAvecPizza() {
        // jouer1Pizza();
-        jouerAvecPlusieursPizzas();
+        //jouerAvecPlusieursPizzas();
+        saisirLeXDUnePizza();
     }
+
+    private void saisirLeXDUnePizza() {
+        Pizza p;
+        int nouveauX;
+
+        do {
+            nouveauX = lireInt("Donner un X entre " + Pizza.MIN_X + " et " + Pizza.MAX_X + ": ");
+        } while (!Pizza.xEstValide(nouveauX));
+        p = new Pizza(1, 2, 5, "rouge");
+        p.setX(nouveauX);
+        System.out.println(p);
+    }
+
+
+
 
     private void jouerAvecPlusieursPizzas() {
         Pizza[] tabPizza = new Pizza[4];

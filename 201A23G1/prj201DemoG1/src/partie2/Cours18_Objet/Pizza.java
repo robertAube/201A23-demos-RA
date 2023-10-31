@@ -2,32 +2,26 @@ package partie2.Cours18_Objet;
 
 public class Pizza {
     //attributs ou variables d'instance
-    //Pour qu'elles existent, elles doivent-être instanciées avec un new
+    //Pour qu'elle existe, elles doivent-être instanciés avec un new
+    //encapsulation des variables d'instance : on les met private pour éviter qu'on les modifie. La classe a alors le plein contrôle.
     private int x;
     private int y;
     private int vitesse;
     private String couleur;
 
-    Pizza(int x, int y, int vitesse,  String couleur) {
-        setXY(x, y);
-        this.couleur = couleur;
+    public Pizza(int x, int y, int vitesse, String couleur) { //Constructeur
+        this.x = x;  //le mot clé this fait référence à l'instance courante.
+        this.y = y; //variable d'instance mauve & variable locale noire
         this.vitesse = vitesse;
-    }
-
-    public void setXY(int x, int y) {
-        this.x = x; //this fait référence à l'instance courante
-        this.y = y;
-    }
-
-    public int getX() {
-        return x;
+        this.couleur = couleur;
     }
 
     public void avancerX() {
         x += vitesse;
     }
 
-    public String toString() { //méthode standard en java
+    @Override
+    public String toString() {
         return "Pizza{" +
                 "x=" + x +
                 ", y=" + y +
