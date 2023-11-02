@@ -1,12 +1,12 @@
-package partie2.Cours19_ObjectSuite;
+package partie2.Cours20_ObjetSuite;
 
-import static partie2._utilitaire.UtilSaisie.*;
+import static partie2._utilitaire.UtilSaisie.lireInt;
 
 public class JouerAvecPizza {
     public JouerAvecPizza() {
        // jouer1Pizza();
-        //jouerAvecPlusieursPizzas();
-        saisirLeXDUnePizza();
+        jouerAvecPlusieursPizzas();
+        //saisirLeXDUnePizza();
     }
 
     private void saisirLeXDUnePizza() {

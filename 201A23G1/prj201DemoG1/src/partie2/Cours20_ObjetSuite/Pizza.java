@@ -1,11 +1,10 @@
-package partie2.Cours19_ObjectSuite;
+package partie2.Cours20_ObjetSuite;
 
 public class Pizza {
-    //attributs ou variables d'instance
+    //Attributs ou variables d'instance
     //Pour qu'elle existe, elles doivent-être instanciés avec un new
     //encapsulation des variables d'instance : on les met private pour éviter qu'on les modifie. La classe a alors le plein contrôle.
-    private int x;
-    private int y;
+    private Coordonnee coordonnee;
     private int vitesse;
     private String couleur;
 
@@ -17,6 +16,7 @@ public class Pizza {
     public static final int MAX_XY = -MIN_XY;
 
     public Pizza(int x, int y, int vitesse, String couleur) { //Constructeur
+        coordonnee = new Coordonnee(); //On doit instancier la coordonnée
         setX(x);  //le mot clé this fait référence à l'instance courante.
         setY(y); //variable d'instance mauve & variable locale noire
         this.vitesse = vitesse;
@@ -24,28 +24,33 @@ public class Pizza {
     }
 
     public void avancerX() {
-        x += vitesse;
+        coordonnee.setX(coordonnee.getX() + vitesse);
     }
-
 
     public void setX(int x) { //mutateur : permet de modifier une variable d'instance
         if (xyEstValide(x)) {
-            this.x = x;  //le mot clé this fait référence à l'instance courante.
+            coordonnee.setX(x);  //le mot clé this fait référence à l'instance courante.
         } else {
             //On lance une exception de type IllegalArgumentException avec un message.
-            throw new IllegalArgumentException(x + " est une valeur invalide (" + MIN_XY + ", " + MAX_XY + ")" );
+            throw new IllegalArgumentException(x + " est une valeur invalide (" + MIN_XY + ", " + MAX_XY + ")");
         }
     }
+
     public void setY(int y) { //mutateur : permet de modifier une variable d'instance
         if (xyEstValide(y)) {
-            this.y = y;  //le mot clé this fait référence à l'instance courante.
+            coordonnee.setY(y);  //le mot clé this fait référence à l'instance courante.
         } else {
             //On lance une exception de type IllegalArgumentException avec un message.
-            throw new IllegalArgumentException(y + " est une valeur invalide (" + MIN_XY + ", " + MAX_XY + ")" );
+            throw new IllegalArgumentException(y + " est une valeur invalide (" + MIN_XY + ", " + MAX_XY + ")");
         }
     }
+
     public int getX() { //accesseur : permet de lire une variable d'instance
-        return x;
+        return coordonnee.getX();
+    }
+
+    public int getY() { //accesseur : permet de lire une variable d'instance
+        return coordonnee.getY();
     }
 
     //static : appartient à la classe et peut-être accéder avec Pizza.xEstValide(2)
@@ -56,8 +61,8 @@ public class Pizza {
     @Override
     public String toString() {
         return "Pizza{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + getX() +
+                ", y=" + getY() +
                 ", vitesse=" + vitesse +
                 ", couleur='" + couleur + '\'' +
                 '}';
