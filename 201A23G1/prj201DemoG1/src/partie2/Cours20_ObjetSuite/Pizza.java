@@ -10,7 +10,7 @@ public class Pizza {
 
     //Constantes de classe
     //constante : valeur qui ne peut pas changer. norme : Toujours en majuscule
-    //static : appartient à la classe : existe toujours (en existe qu'une)
+    //static : appartien à la classe: existe toujours! (en existe qu'une... peu importe le nombre d'instances)
     //final : la variable ne peut pas être changé.
     public static final int MIN_XY = -100;
     public static final int MAX_XY = -MIN_XY;

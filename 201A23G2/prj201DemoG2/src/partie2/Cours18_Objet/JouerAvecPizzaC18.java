@@ -1,7 +1,7 @@
 package partie2.Cours18_Objet;
 
-public class JouerAvecPizza {
-    public JouerAvecPizza() {
+public class JouerAvecPizzaC18 {
+    public JouerAvecPizzaC18() {
        // jouer1Pizza();
         jouerAvecPlusieursPizzas();
     }
@@ -50,7 +50,7 @@ public class JouerAvecPizza {
     }
 
     public static void main(String[] args) { //static fait référence à la classe
-        new JouerAvecPizza();
+        new JouerAvecPizzaC18();
 
     }
 }

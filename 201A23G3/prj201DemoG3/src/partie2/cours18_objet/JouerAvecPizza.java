@@ -1,10 +1,61 @@
 package partie2.cours18_objet;
 
+import _util.UtilSaisie;
+
 public class JouerAvecPizza {
 
     public JouerAvecPizza() {
         //jouerAvecUnePizza();
-        jouerAvecPlusieursPizzas();
+        //   jouerAvecPlusieursPizzas();
+        //   jouerAvecPizza();
+        // saisirUnePizzaEtAfficher();
+        testerConstructeurs();
+    }
+
+    private void testerConstructeurs() {
+        Pizza p;
+
+        p = new Pizza();
+
+        System.out.println(p);
+
+        p = new Pizza(1 , 2);
+
+        System.out.println(p);
+    }
+
+    private void saisirUnePizzaEtAfficher() {
+        Pizza p; //type complexe vs type primitif
+        int x;
+        int y;
+        boolean nEstPasValide;
+        String message;
+
+        do {
+            x = UtilSaisie.lireInt("Donner le x de la pizza : ");
+            y = UtilSaisie.lireInt("Donner le y de la pizza : ");
+            nEstPasValide = !Pizza.estValideXY(x, y);
+            if (nEstPasValide) {
+                message = "(" + x + ", " + y + ") n'est pas valide: leur valeur doit être entre [" + Pizza.MIN_XY + ", " + Pizza.MAX_XY + "]";
+                System.out.println(message);
+            }
+        } while (nEstPasValide);
+
+
+        p = new Pizza(x, y, 5, "rouge");
+
+        System.out.println(p);
+    }
+
+    private void jouerAvecPizza() {
+        Pizza p; //type complexe vs type primitif
+
+        p = new Pizza(4, 2, 5, "rouge");
+        System.out.println(p);
+        p.setXY(55, p.getY());
+        System.out.println(p);
+        p.setXY(16, 0);
+        System.out.println(p);
     }
 
     private void jouerAvecPlusieursPizzas() {
@@ -48,6 +99,8 @@ public class JouerAvecPizza {
         //    p.y = 111; //y pas accessible. Il est privé
         System.out.println(p);
     }
+
+
 
     public static void main(String[] args) {
         new JouerAvecPizza();
