@@ -1,28 +1,51 @@
-package partie2.cours18_objet;
+package partie2.cours20_objetsSuite;
 
 import _util.UtilSaisie;
 
 public class JouerAvecPizza {
 
     public JouerAvecPizza() {
-        //jouerAvecUnePizza();
-        //   jouerAvecPlusieursPizzas();
-        //   jouerAvecPizza();
-        // saisirUnePizzaEtAfficher();
-        testerConstructeurs();
-    }
+//        jouerAvecUnePizza();
+//        jouerAvecPlusieursPizzas();
+//        jouerAvecPizza();
+//        //saisirUnePizzaEtAfficher();
+//        tester_constructeurs();
+        test_getDUnePizza();
 
-    private void testerConstructeurs() {
+    }
+    private void test_getDUnePizza() {
+        Pizza p1;
+        Pizza p2;
+
+        p1 = new Pizza(1, 2, 4, "rouge");
+
+        System.out.println(p1);
+
+        p2 = p1.get();
+
+        System.out.println(p2);
+
+        p2.avancerX();
+
+        System.out.println(p1);
+        System.out.println(p2);
+
+    }
+    private void tester_constructeurs() {
         Pizza p;
 
         p = new Pizza();
 
         System.out.println(p);
 
-        p = new Pizza(1 , 2);
+        p = new Pizza(1, 2);
 
         System.out.println(p);
+
+
     }
+
+
 
     private void saisirUnePizzaEtAfficher() {
         Pizza p; //type complexe vs type primitif
@@ -52,7 +75,7 @@ public class JouerAvecPizza {
 
         p = new Pizza(4, 2, 5, "rouge");
         System.out.println(p);
-        p.setXY(55, p.getY());
+//        p.setXY(55, p.getY());
         System.out.println(p);
         p.setXY(16, 0);
         System.out.println(p);
@@ -99,7 +122,6 @@ public class JouerAvecPizza {
         //    p.y = 111; //y pas accessible. Il est privé
         System.out.println(p);
     }
-
 
 
     public static void main(String[] args) {

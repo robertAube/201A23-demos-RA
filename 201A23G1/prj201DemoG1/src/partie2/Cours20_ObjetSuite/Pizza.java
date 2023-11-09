@@ -53,6 +53,23 @@ public class Pizza {
         return coordonnee.getY();
     }
 
+
+    public void set(Pizza pizza) {
+        this.coordonnee.setX(pizza.coordonnee.getX()); //"pizza.coordonnee.getX()" fait référence à la pizza reçue en argument
+        //"this.coordonnee.setX" fait référence à l'objet courant.
+        this.coordonnee.setY(pizza.coordonnee.getY()); //"pizza.coordonnee.getX()" fait référence à la pizza reçue en argument
+
+        this.coordonnee = pizza.coordonnee; // si on fait ça les 2 pizzas (this et la pizza reçue en argument) vont partager la même coordonnée.
+
+        this.vitesse = pizza.vitesse;
+        this.couleur = pizza.couleur;
+    }
+
+    public Pizza getPizza() {
+        Pizza p = new Pizza(coordonnee.getX(), coordonnee.getY(), vitesse, couleur);
+        return p;
+    }
+
     //static : appartient à la classe et peut-être accéder avec Pizza.xEstValide(2)
     public static boolean xyEstValide(int x) {
         return (MIN_XY <= x && x <= MAX_XY);

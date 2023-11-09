@@ -1,12 +1,11 @@
-package partie2.cours18_objet;
+package partie2.cours20_objetsSuite;
 
 public class Pizza {
     //Attributs ou des variables d'instances
     //Pour qu'elles existent, la classe doit être instanciée avec new.
     //On les met private pour éviter qu'elles soient modifiées à l'extérieur de la classe.
     // On appelle ça l'encapsulation.
-    private int x;
-    private int y;
+    private Coordonnee coordonnee;
     private int vitesse;
     private String couleur;
 
@@ -32,21 +31,24 @@ public class Pizza {
     }
 
     public Pizza(int x, int y, int vitesse, String couleur) {
+        this.coordonnee = new Coordonnee(); //IMPORTANT
         setXY(x, y); //important pour garder la cohérence.
         this.vitesse = vitesse;
         this.couleur = couleur;
     }
 
+    public Pizza get(){
+        return new Pizza(coordonnee.getX(), coordonnee.getY(), vitesse, couleur);
+    }
     public void avancerX() {
-        x += vitesse;
+        coordonnee.translate(vitesse, 0);
     }
 
     public void setXY(int x, int y) { //mutateur
         String message;
 
         if (estValideXY(x, y)) {
-            this.x = x;
-            this.y = y;
+            coordonnee.move(x, y);
         } else {
             message = "(" + x + ", " + y + ") n'est pas valide: leur valeur doit être entre [" + MIN_XY + ", " + MAX_XY + "]";
             throw new IllegalArgumentException(message);
@@ -65,18 +67,18 @@ public class Pizza {
     }
 
     public int getX() { //accesseur
-        return x; //prend le x de l'instance courante
+        return coordonnee.getX(); //prend le x de l'instance courante
     }
 
     public int getY() { //accesseur
-        return y;
+        return coordonnee.getY();
     }
 
     @Override
     public String toString() {
         return "Pizza{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + getX() +
+                ", y=" + getY() +
                 ", vitesse=" + vitesse +
                 ", couleur='" + couleur + '\'' +
                 '}';
