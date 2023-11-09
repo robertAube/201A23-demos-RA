@@ -4,19 +4,21 @@ package tp4Tableau;
  * TableauDouble est une structure de données qui emmagasine des réels (double). Le
  * premier élément est stocké à l'indice 0.
  *
+ * @link https://github.com/robertAube/201A23-demos-RA/tree/main/TP4
  * @author Robert Aubé
  * @version A23 420-201 TP4a 2023-11-06  V1
  */
 public class TableauDoubleTest {
     //    Ces variables d'instance doivent être décommentées aussitôt que votre classe TableauTest est créé
-    private TableauDouble t1;
-    private TableauDouble t2;
-    private TableauDouble t3;
+//    private TableauDouble t1;
+//    private TableauDouble t2;
+//    private TableauDouble t3;
 
     private TestHelper testHelper;
 
     public TableauDoubleTest() {
-        System.out.println("201-TP4 - Tests pour TableauDouble - Version 1");
+        System.out.println("201-TP4 - Tests pour TableauDouble - Version 3");
+        System.out.println("https://github.com/robertAube/201A23-demos-RA/tree/main/TP4");
         testHelper = new TestHelper();
         tester();
         testHelper.afficherBilan();
@@ -38,7 +40,7 @@ public class TableauDoubleTest {
 //        tester_estPlusPetit1Argument(); //13
 //        tester_estPlusPetit2Arguments(); //14
     }
-//
+
 //    /**
 //     * 1 - tester_instancierEtToString()
 //     */
@@ -89,6 +91,9 @@ public class TableauDoubleTest {
 //        System.out.println("\td. " + testHelper.shouldBeEqual(t2.size(), 0));
 //    }
 //
+//    /**
+//     * 4 - tester_set()
+//     */
 //    private void tester_set() {
 //        System.out.println("4 - tester_set()");
 //        t1 = new TableauDouble(4);
@@ -100,6 +105,9 @@ public class TableauDoubleTest {
 //        System.out.println("\tc. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 4 [1.0, 2.0, 3.0, 4.0]"));
 //    }
 //
+//    /**
+//     * 5 - tester_get()
+//     */
 //    private void tester_get() {
 //        System.out.println("5 - tester_get()");
 //        double valeurEcrite;
@@ -113,6 +121,9 @@ public class TableauDoubleTest {
 //        }
 //    }
 //
+//    /**
+//     * 6 - tester_add()
+//     */
 //    private void tester_add() {
 //        System.out.println("6 - tester_add()");
 //        double[] tDouble = {1, 2, 3, 4};
@@ -129,6 +140,9 @@ public class TableauDoubleTest {
 //    }
 //
 //
+//    /**
+//     * 7 - tester_clear()
+//     */
 //    private void tester_clear() {
 //        System.out.println("7 - tester_clear()");
 //        double[] tDouble = {1, 2, 3, 4};
@@ -142,6 +156,10 @@ public class TableauDoubleTest {
 //        System.out.println("\tc. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 0 []"));
 //    }
 //
+//
+//    /**
+//     * 8 - tester_remove()
+//     */
 //    private void tester_remove() {
 //        System.out.println("8 - tester_remove()");
 //        double elementRetire;
@@ -169,6 +187,10 @@ public class TableauDoubleTest {
 //        System.out.println("\tj. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 2 [2.0, 4.0]"));
 //    }
 //
+//
+//    /**
+//     * 9 - tester_permuter()
+//     */
 //    private void tester_permuter() {
 //        System.out.println("9 - tester_permuter()");
 //        t1 = new TableauDouble(0);
@@ -190,6 +212,10 @@ public class TableauDoubleTest {
 //        System.out.println("\tf. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 5 [5.0, 1.0, 3.0, 4.0, 2.0]"));
 //    }
 //
+//
+//    /**
+//     * 10 - tester_shuffle()
+//     */
 //    private void tester_shuffle() {
 //        String str = "10 - tester_shuffle()\n";
 //        char lettre = 'a';
@@ -222,6 +248,10 @@ public class TableauDoubleTest {
 //        System.out.println(str);
 //    }
 //
+//
+//    /**
+//     * tester_setTab()
+//     */
 //    private void tester_setTab() {
 //        double tab[] = {1.0, 2.0};
 //        String str = "11 - tester_setTab()";
@@ -247,6 +277,10 @@ public class TableauDoubleTest {
 //        System.out.println(str);
 //    }
 //
+//
+//    /**
+//     * tester_setSomme()
+//     */
 //    private void tester_setSomme() {
 //        System.out.println("12 - tester_getSomme()");
 //
@@ -259,6 +293,10 @@ public class TableauDoubleTest {
 //        System.out.println("\td. " + testHelper.shouldBeEqual(t1.getSomme(), 4.0));
 //    }
 //
+//
+//    /**
+//     * tester_estPlusPetit1Argument()
+//     */
 //    private void tester_estPlusPetit1Argument() {
 //        System.out.println("13 - tester_estPlusPetit1Argument()");
 //
@@ -287,6 +325,9 @@ public class TableauDoubleTest {
 //        System.out.println("\tl. " + testHelper.shouldBeTrue(t1.estPlusPetit(t2)));
 //    }
 //
+//    /**
+//     * tester_estPlusPetit2Arguments()
+//     */
 //    private void tester_estPlusPetit2Arguments() {
 //        System.out.println("14 - tester_estPlusPetit2Arguments()");
 //
