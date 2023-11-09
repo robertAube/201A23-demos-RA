@@ -65,6 +65,10 @@ public class Pizza {
         this.couleur = pizza.couleur;
     }
 
+    /**
+     * Retourne une nouvelle pizza construite à partir de l'instance courante.
+     * @return une nouvelle pizza construite à partir de l'instance courante
+     */
     public Pizza getPizza() {
         Pizza p = new Pizza(coordonnee.getX(), coordonnee.getY(), vitesse, couleur);
         return p;

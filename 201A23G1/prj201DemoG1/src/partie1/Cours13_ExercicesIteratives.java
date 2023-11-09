@@ -1,14 +1,8 @@
-<<<<<<< refs/remotes/origin/main:201A23G1/prj201DemoG1/src/partie1/Cours13_exercicesIteratives.java
 package partie1;
 
-public class Cours13_exercicesIteratives {
-    public Cours13_exercicesIteratives() {
-      //  tester_inverserString();
-=======
 public class Cours13_ExercicesIteratives {
     public Cours13_ExercicesIteratives() {
         tester_inverserString();
->>>>>>> Auto stash before rebase of "origin/main":201A23G1/prj201DemoG1/src/Cours13_exercicesIteratives.java
         tester_getStringCarre();
     }
 
@@ -21,7 +15,7 @@ public class Cours13_ExercicesIteratives {
     private String inverserString(String strAInverser) {
         String strInverse = "";
 
-        for (int i = strAInverser.length() ; i >= 0 ; i--) {
+        for (int i = strAInverser.length(); i >= 0; i--) {
             strInverse += strAInverser.charAt(i);
         }
 
@@ -39,7 +33,7 @@ public class Cours13_ExercicesIteratives {
 
         for (int ligne = 1; ligne <= limite; ligne++) { // boucle imbriquée
             for (int colonne = 1; colonne <= limite; colonne++) { //faire une ligne
-                str += " " + colonne + "" + ligne ;
+                str += " " + colonne + "" + ligne;
             }
             str += '\n';
         }
@@ -47,6 +41,6 @@ public class Cours13_ExercicesIteratives {
     }
 
     public static void main(String[] args) {
-        new Cours13_exercicesIteratives();
+        new Cours13_ExercicesIteratives();
     }
 }
