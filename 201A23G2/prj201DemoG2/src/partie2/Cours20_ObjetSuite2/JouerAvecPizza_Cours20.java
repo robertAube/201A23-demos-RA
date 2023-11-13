@@ -2,10 +2,10 @@ package partie2.Cours20_ObjetSuite2;
 
 import java.util.Scanner;
 
-public class JouerAvecPizza {
+public class JouerAvecPizza_Cours20 {
     private Pizza[] listePizza;
 
-    public JouerAvecPizza() {
+    public JouerAvecPizza_Cours20() {
         jouer1Pizza();
         jouerAvecPlusieursPizzas1();
         jouerAvecPlusieursPizzas2();
@@ -119,7 +119,7 @@ public class JouerAvecPizza {
 
 
     public static void main(String[] args) { //static fait référence à la classe
-        new JouerAvecPizza();
+        new JouerAvecPizza_Cours20();
 
     }
 }

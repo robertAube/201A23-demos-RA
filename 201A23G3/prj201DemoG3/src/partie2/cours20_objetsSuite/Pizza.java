@@ -33,13 +33,32 @@ public class Pizza {
     public Pizza(int x, int y, int vitesse, String couleur) {
         this.coordonnee = new Coordonnee(); //IMPORTANT
         setXY(x, y); //important pour garder la cohérence.
-        this.vitesse = vitesse;
+        setVitesse(vitesse);
         this.couleur = couleur;
     }
 
     public Pizza get(){
         return new Pizza(coordonnee.getX(), coordonnee.getY(), vitesse, couleur);
     }
+
+    public void setVitesse(int vitesse) {
+        if (vitesseEstValide(vitesse)) {
+            this.vitesse = vitesse;
+        } else {
+            throw new IllegalArgumentException(vitesse + " est une vitesse invalide");
+        }
+    }
+
+    public static boolean vitesseEstValide(int vitesse) {
+        return vitesse >= 0;
+    }
+
+    public void set(Pizza pizza) {
+        coordonnee.move(pizza.getX(), pizza.coordonnee.getY());
+        vitesse = pizza.vitesse; //pizza.vitesse fait référence à la pizza reçue en argument
+        couleur = pizza.couleur; //comme on est dans la classe Pizza, pas besoin d'utiliser les accesseurs (get)
+    }
+
     public void avancerX() {
         coordonnee.translate(vitesse, 0);
     }

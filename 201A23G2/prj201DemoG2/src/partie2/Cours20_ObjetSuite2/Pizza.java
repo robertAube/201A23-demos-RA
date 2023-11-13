@@ -43,6 +43,18 @@ public class Pizza {
         }
     }
 
+    public Pizza get() {
+        Pizza p = new Pizza(coordonnee.getX(), coordonnee.getY(), vitesse, couleur);
+        return p;
+    }
+
+    public void set(Pizza pizza) {
+        coordonnee.move(pizza.coordonnee.getX(), pizza.coordonnee.getY());
+
+        vitesse = pizza.vitesse; //pizza.vitesse accès à la vitesse de l'instance reçu en argument
+        couleur = pizza.couleur; //comme on est dans la classe pizza pas besoin d'utiliser les accesseurs (get);
+    }
+
     public static boolean xyEstValide(int x, int y) { //static : lié à la classe. Pas besoin d'instance pour l'utiliser. N'accède pas les variables de l'instance.
         boolean estValide;
         estValide = MIN_XY <= x && x <= MAX_XY;
@@ -56,8 +68,7 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                " (" + coordonnee +
+        return "Pizza{" + coordonnee +
                 ", vitesse=" + vitesse +
                 ", couleur='" + couleur + '\'' +
                 '}';

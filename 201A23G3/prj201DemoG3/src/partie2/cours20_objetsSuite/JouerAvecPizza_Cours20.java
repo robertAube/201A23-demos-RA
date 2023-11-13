@@ -2,9 +2,9 @@ package partie2.cours20_objetsSuite;
 
 import _util.UtilSaisie;
 
-public class JouerAvecPizza {
+public class JouerAvecPizza_Cours20 {
 
-    public JouerAvecPizza() {
+    public JouerAvecPizza_Cours20() {
 //        jouerAvecUnePizza();
 //        jouerAvecPlusieursPizzas();
 //        jouerAvecPizza();
@@ -125,6 +125,6 @@ public class JouerAvecPizza {
 
 
     public static void main(String[] args) {
-        new JouerAvecPizza();
+        new JouerAvecPizza_Cours20();
     }
 }
