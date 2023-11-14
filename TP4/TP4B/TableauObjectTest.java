@@ -1,12 +1,12 @@
 package tp4Tableau;
 /**
  * Classe de tests pour TableauObject
- * TableauObject est une structure de données qui emmagasine des réels . Le
+ * TableauObject est une structure de données qui emmagasine des réels. Le
  * premier élément est stocké à l'indice 0.
  *
- * @link https://github.com/robertAube/201A23-demos-RA/tree/main/TP4
+ * @link https://github.com/robertAube/201A23-demos-RA/blob/main/TP4/TP4B/TableauObjectTest.java
  * @author Robert Aubé
- * @version A23 420-201 TP4a 2023-11-06  Version 5
+ * @version A23 420-201 TP4B 2023-11-06  Version 5
  */
 public class TableauObjectTest {
     //    Ces variables d'instance doivent être décommentées aussitôt que votre classe TableauTest est créé
@@ -18,7 +18,7 @@ public class TableauObjectTest {
 
     public TableauObjectTest() {
         System.out.println("201-TP4B - Tests pour TableauObject - Version 5");
-        System.out.println("https://github.com/robertAube/201A23-demos-RA/tree/main/TP4");
+        System.out.println("https://github.com/robertAube/201A23-demos-RA/blob/main/TP4/TP4B/TableauObjectTest.java");
         testHelper = new TestHelper();
         tester();
         testHelper.afficherBilan();
