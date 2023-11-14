@@ -1,4 +1,3 @@
-package tp4Tableau;
 /**
  * Classe de tests pour TableauDouble
  * TableauDouble est une structure de données qui emmagasine des réels (double). Le
@@ -17,7 +16,7 @@ public class TableauDoubleTest {
     private TestHelper testHelper;
 
     public TableauDoubleTest() {
-        System.out.println("201-TP4 - Tests pour TableauDouble - Version 3");
+        System.out.println("201-TP4A - Tests pour TableauDouble - Version 4");
         System.out.println("https://github.com/robertAube/201A23-demos-RA/tree/main/TP4");
         testHelper = new TestHelper();
         tester();
@@ -254,12 +253,12 @@ public class TableauDoubleTest {
 //     */
 //    private void tester_setTab() {
 //        double tab[] = {1.0, 2.0};
-//        String str = "11 - tester_setTab()";
+//        String str = "11 - tester_setTab()\n";
 //
 //        t1 = new TableauDouble(0);
 //        str += "\ta. " + t1 + '\n';
 //        t1.set(new double[]{4.0, 2.0});
-//        str += "\tb. " + t1;
+//        str += "\tb. " + t1 + '\n';
 //        str += "\tc. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 2 [4.0, 2.0]") + '\n';
 //
 //        t1 = new TableauDouble(4);

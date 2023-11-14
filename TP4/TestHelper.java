@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
  * Inspiré par les Fluents Assertions:
  *
  * @author Robert Aubé
- * @version décembre 2023
+ * @version novembre 2023 - v2.0
  * @see <a href="https://fluentassertions.com/tips/</a>
  */
 public class TestHelper {
@@ -33,16 +33,38 @@ public class TestHelper {
 
     public void afficherBilan() {
         String str;
-        int nbTest = nbTestReussi + nbTestEchec;
-        double pourCent = (double) nbTestReussi / nbTest * 100;
-        String strPourCent = String.format("%,.1f", pourCent);
-        String strRes = String.format("%,.1f", (pourCent * 0.50));
-        str = "Il y a eu " + nbTestReussi + " tests réussis ";
-        str += "et " + nbTestEchec + " échecs ";
-        str += "pour un total de " + nbTest + " tests.";
-        str += " (" + strPourCent + "%)";
-        str += " (" + strRes + "/ 50)";
+        int nbTest;
+
+        nbTest = nbTestReussi + nbTestEchec;
+
+        if (nbTest == 0) {
+            str = "Aucun test n'a été réalisé.";
+        } else {
+            str = getStrBilan();
+        }
         System.out.println(str);
+    }
+
+    private String getStrBilan() {
+        String str = "";
+        int nbTest;
+        double pourCent;
+        String strPourCent;
+        String strRes;
+
+        nbTest = nbTestReussi + nbTestEchec;
+        if (nbTest >= 0) {
+            pourCent = (double) nbTestReussi / nbTest * 100;
+            strPourCent = String.format("%,.1f", pourCent);
+            strRes = String.format("%,.1f", (pourCent * 0.50));
+            str = "Il y a eu " + nbTestReussi + " tests réussis ";
+            str += "et " + nbTestEchec + " échecs ";
+            str += "pour un total de " + nbTest + " tests.";
+            str += " (" + strPourCent + "%)";
+            str += " (" + strRes + "/ 50)";
+        }
+
+        return str;
     }
 
     public static void afficherInstruction() {
