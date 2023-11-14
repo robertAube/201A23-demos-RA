@@ -54,7 +54,7 @@ public class JouerAvecObject_Cours22 {
 
         System.out.println(p);
 
-        p.hashCode(); //on a accès à des méthodes de la classe Object parce que toutes les classes Héritent d'Object.
+        p.hashCode(); //on a accès à des méthodes de la classe Object parce que toutes les classes héritent d'Object.
 
         o = p;
 

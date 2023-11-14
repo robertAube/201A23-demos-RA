@@ -4,7 +4,7 @@ public class JouerAvecObject_Cours22 {
     public JouerAvecObject_Cours22() {
         // jouerAvecPizzaETObject1();
         // jouerAvecPizzaETObject2();
-        //jouerAvecUnTableauDObjets1();
+        jouerAvecUnTableauDObjets1();
     }
 
 
@@ -17,7 +17,7 @@ public class JouerAvecObject_Cours22 {
 
         for (int i = 0; i < tabObjets.length; i++) {
             System.out.println(tabObjets[i]);
-            //  ((Pizza)tabObjets[i]).avancerX(); //Comme tous les objets ne sont pas des Pizzas, ça fait une erreur d'exécution
+           //  ((Pizza)tabObjets[i]).avancerX(); //Comme tous les objets ne sont pas des Pizzas, ça fait une erreur d'exécution
         }
     }
 
