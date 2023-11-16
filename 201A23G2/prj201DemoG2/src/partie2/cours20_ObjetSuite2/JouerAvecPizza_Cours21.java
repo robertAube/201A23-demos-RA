@@ -1,4 +1,4 @@
-package partie2.Cours20_ObjetSuite2;
+package partie2.cours20_ObjetSuite2;
 
 public class JouerAvecPizza_Cours21 {
     public JouerAvecPizza_Cours21() {

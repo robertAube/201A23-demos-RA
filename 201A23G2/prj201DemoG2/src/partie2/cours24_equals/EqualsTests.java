@@ -1,4 +1,4 @@
-package partie2.Cours24_equals;
+package partie2.cours24_equals;
 
 public class EqualsTests {
     public EqualsTests() {

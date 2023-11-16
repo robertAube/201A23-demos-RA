@@ -1,15 +1,15 @@
-package partie2.Cours20_ObjetSuite2;
+package partie2.cours19_ObjetSuite;
 
 import java.util.Scanner;
 
-public class JouerAvecPizza_Cours20 {
+public class JouerAvecPizza {
     private Pizza[] listePizza;
 
-    public JouerAvecPizza_Cours20() {
-        jouer1Pizza();
-        jouerAvecPlusieursPizzas1();
-        jouerAvecPlusieursPizzas2();
-      //  usagerCreeUnePizza();
+    public JouerAvecPizza() {
+        // jouer1Pizza();
+//        jouerAvecPlusieursPizzas1();
+//        jouerAvecPlusieursPizzas2();
+        usagerCreeUnePizza();
     }
 
     private void usagerCreeUnePizza() {
@@ -37,7 +37,7 @@ public class JouerAvecPizza_Cours20 {
         creerPizza();
         afficher(listePizza);
         for (int i = 0; i < listePizza.length; i++) {
-            listePizza[i].setXY(i * 2, i * 2);
+            listePizza[i].setXY(i * 51, i * 51);
         }
         afficher(listePizza);
     }
@@ -119,7 +119,7 @@ public class JouerAvecPizza_Cours20 {
 
 
     public static void main(String[] args) { //static fait référence à la classe
-        new JouerAvecPizza_Cours20();
+        new JouerAvecPizza();
 
     }
 }

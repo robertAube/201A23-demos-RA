@@ -1,5 +1,6 @@
-package partie2.Cours24_equals;
+package partie2.cours20_ObjetSuite2;
 
+import java.awt.*;
 
 public class Coordonnee {
     private int x;
@@ -14,6 +15,7 @@ public class Coordonnee {
     }
 
     public Coordonnee(int x, int y) {
+        Point p;
         setX(x);
         setY(y);
     }
@@ -63,33 +65,6 @@ public class Coordonnee {
         } else {
             throw new IllegalArgumentException("Coordonné Y est invalide " + y + " : elle doit être entre " + MIN_XY + " et " + MAX_XY);
         }
-    }
-
-    //IMPORTANT : C'EST A L'EXAMEN
-    public boolean equals(Object paramObjet) { //redéfinition de la méthode equals d'Object
-        boolean estEgale ;
-        Coordonnee that;
-
-        //On est certain que l'objet courant est différent de null. Sinon, on n'aurait pas pu appeler cette méthode
-
-        if (this == paramObjet) {
-            return true; //si c'est le même instance retourner true
-        }
-
-        if (paramObjet == null) { //
-            return false;
-        }
-
-        if (this.getClass() != paramObjet.getClass()) { // on vérifie le type de la classe de paramObjet est de même type que this
-            return false;
-        }
-
-        that = (Coordonnee) paramObjet;
-
-//        estEgale = x == ((Coordonnee)paramObjet).x && y == ((Coordonnee)paramObjet).y; // si on n'utilise pas la variable that
-        estEgale = x == that.x && y == that.y;
-
-        return estEgale;
     }
 
     @Override
