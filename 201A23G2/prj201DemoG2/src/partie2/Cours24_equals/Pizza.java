@@ -1,4 +1,4 @@
-package partie2.Cours20_ObjetSuite2;
+package partie2.Cours24_equals;
 
 public class Pizza {
     //Attributs ou variables d'instance
@@ -66,6 +66,18 @@ public class Pizza {
         coordonnee.deplacement(vitesse, 0);
     }
 
+    //IMPORTANT  A l'EXAMEN
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pizza pizza = (Pizza) o;
+
+        if (vitesse != pizza.vitesse) return false;
+        if (!coordonnee.equals(pizza.coordonnee)) return false;
+        return couleur.equals(pizza.couleur);
+    }
 
     @Override
     public String toString() {

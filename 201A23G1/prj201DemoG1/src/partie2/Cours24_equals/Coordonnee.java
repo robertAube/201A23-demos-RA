@@ -72,14 +72,14 @@ public class Coordonnee {
             return false;
         }
         
-        if (this.getClass() != paramObjet.getClass()) { //on vérifie le type de la classe de paramObjet est de même type.
+        if (this.getClass() != paramObjet.getClass()) { //on vérifie le type de la classe de paramObjet est de même type que .
             return false; //retourne false si par exemple paramObjet est une Pizza
         }
 
         that = (Coordonnee) paramObjet;
 
         estEgale = x == that.x && y == that.y;
-     //   estEgale = x == ((Coordonnee) paramObjet).x && y == ((Coordonnee) paramObjet).y;
+     //   estEgale = x == ((Coordonnee) paramObjet).x && y == ((Coordonnee) paramObjet).y; // si on n'utilise pas la variable that
         
         return estEgale;
     }
