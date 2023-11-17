@@ -73,7 +73,7 @@ public class Coordonnee {
         //On est certain que l'objet courant est différent de null. Sinon, on n'aurait pas pu appeler cette méthode
 
         if (this == paramObjet) {
-            return true; //si c'est le même instance retourner true
+            return true; //si c'est la même instance retourner true
         }
 
         if (paramObjet == null) { //
