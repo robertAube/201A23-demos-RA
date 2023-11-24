@@ -1,4 +1,4 @@
-package partie2.cours24_equals;
+package partie2.cours23_equals;
 
 public class Pizza {
     //Attributs ou variables d'instance
