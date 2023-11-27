@@ -1,4 +1,4 @@
-package partie2.Cours20_ObjetSuite;
+package partie2.cours20_ObjetSuite;
 
 public class ClasseEnveloppe_Cours23 {
     public ClasseEnveloppe_Cours23() {

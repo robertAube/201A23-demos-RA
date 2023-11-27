@@ -1,4 +1,4 @@
-package partie2.Cours20_ObjetSuite;
+package partie2.cours25_ArrayList;
 
 
 public class Coordonnee {
@@ -17,7 +17,31 @@ public class Coordonnee {
         setX(x);
         setY(y);
     }
+    public boolean equals(Object paramObjet)   {
+        boolean estEgale;
+        Coordonnee that; //that est le paramètre
 
+        //On est certain que l'objet courant est différent de null. Sinon, on n'aurait pas pu appeler cette méthode
+
+        if (this == paramObjet) { //si c'est la même instance retourner true
+            return true;
+        }
+
+        if (paramObjet == null) {
+            return false;
+        }
+
+        if (this.getClass() != paramObjet.getClass()) { //on vérifie le type de la classe de paramObjet est de même type que .
+            return false; //retourne false si par exemple paramObjet est une Pizza
+        }
+
+        that = (Coordonnee) paramObjet;
+
+        estEgale = x == that.x && y == that.y;
+        //   estEgale = x == ((Coordonnee) paramObjet).x && y == ((Coordonnee) paramObjet).y; // si on n'utilise pas la variable that
+
+        return estEgale;
+    }
     public int getX() {
         return x;
     }

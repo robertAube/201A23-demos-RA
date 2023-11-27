@@ -1,4 +1,4 @@
-package partie2.Cours20_ObjetSuite;
+package partie2.cours20_ObjetSuite;
 
 import static partie2._utilitaire.UtilSaisie.lireInt;
 

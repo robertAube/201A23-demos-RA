@@ -1,4 +1,4 @@
-package partie2.Cours24_equals;
+package partie2.cours20_ObjetSuite;
 
 
 public class Coordonnee {
@@ -54,34 +54,6 @@ public class Coordonnee {
 
     public void deplacement(int dx, int dy) {
         move(x + dx, y + dy);
-    }
-
-
-    //IMPORTANT : EXAMEN
-    public boolean equals(Object paramObjet)   {
-        boolean estEgale;
-        Coordonnee that; //that est le paramètre
-
-        //On est certain que l'objet courant est différent de null. Sinon, on n'aurait pas pu appeler cette méthode
-        
-        if (this == paramObjet) { //si c'est la même instance retourner true
-            return true;
-        }
-        
-        if (paramObjet == null) {  
-            return false;
-        }
-        
-        if (this.getClass() != paramObjet.getClass()) { //on vérifie le type de la classe de paramObjet est de même type que .
-            return false; //retourne false si par exemple paramObjet est une Pizza
-        }
-
-        that = (Coordonnee) paramObjet;
-
-        estEgale = x == that.x && y == that.y;
-     //   estEgale = x == ((Coordonnee) paramObjet).x && y == ((Coordonnee) paramObjet).y; // si on n'utilise pas la variable that
-        
-        return estEgale;
     }
 
     @Override

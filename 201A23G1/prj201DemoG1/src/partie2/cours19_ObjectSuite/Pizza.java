@@ -1,4 +1,4 @@
-package partie2.Cours19_ObjectSuite;
+package partie2.cours19_ObjectSuite;
 
 public class Pizza {
     //attributs ou variables d'instance

@@ -1,6 +1,4 @@
-package partie2.Cours24_equals;
-
-import partie2.Cours20_ObjetSuite.Coordonnee;
+package partie2.cours25_ArrayList;
 
 public class Pizza {
     //Attributs ou variables d'instance
