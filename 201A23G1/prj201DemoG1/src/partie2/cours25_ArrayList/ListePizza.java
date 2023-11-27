@@ -3,7 +3,7 @@ package partie2.cours25_ArrayList;
 import java.util.ArrayList;
 
 public class ListePizza {
-    private ArrayList<Pizza> listePizza;
+    private ArrayList<Pizza> listePizza;  //ArrayList <typeDesObjets> nomListe;
 
     public ListePizza() {
         listePizza = new ArrayList<Pizza>();
@@ -28,7 +28,6 @@ public class ListePizza {
 
     @Override
     public String toString() {
-        return "ListePizza{"  + listePizza.toString() +
-                '}';
+        return "ListePizza{"  + listePizza.toString() + '}';
     }
 }
